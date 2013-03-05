@@ -49,8 +49,11 @@ class binaryTree {
 
         if ($n->getValue() === null) {
             $n->setValue($value);
-            $n->setCompare($this->getCompare());
-
+            
+            $c = $this->getCompare();
+            if ($c) {
+                $n->setCompare($c);
+            }
             return $n;
         }
 
